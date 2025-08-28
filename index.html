@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="header-content">
+            <img src="logo.jpg" alt="Logo de la organización" class="gob-logo">
+            <span class="site-title">FORMULARIO DE TALLERES</span>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1 class="page-title">Inscripción a Talleres</h1>
+
+        <div class="form-container">
+            <form id="inscripcionForm">
+                <div class="form-group">
+                    <label for="nombreCompleto">Nombre completo:</label>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="folioPago">Folio de pago:</label>
+                    <input type="text" id="folioPago" name="folioPago">
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaPago">Fecha de pago:</label>
+                    <input type="text" id="fechaPago" name="fechaPago">
+                </div>
+
+                <div class="form-group">
+                    <label for="curp">CURP:</label>
+                    <input type="text" id="curp" name="curp" required pattern="[A-Z0-9]{18}">
+                    <small>Ej. ABCD123456EFGHIJ78</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="correoElectronico">Correo electrónico:</label>
+                    <input type="text" id="correoElectronico" name="correoElectronico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                    <input type="text" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="municipioProcedencia">Municipio de procedencia:</label>
+                    <input type="text" id="municipioProcedencia" name="municipioProcedencia">
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombreMaestro">Nombre del maestro:</label>
+                    <input type="text" id="nombreMaestro" name="nombreMaestro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="taller">Taller al que quiere pertenecer:</label>
+                    <select id="taller" name="taller" required>
+                        <option value="" disabled selected>Selecciona un taller</option>
+                        <option value="piano">Piano</option>
+                        <option value="guitarra">Guitarra</option>
+                        <option value="violin">Violín</option>
+                        <option value="ballet">Ballet</option>
+                        <option value="canto">Canto</option>
+                        <option value="dibujo_pintura">Dibujo y Pintura</option>
+                        <option value="bateria">Batería</option>
+                        <option value="ceramica">Cerámica</option>
+                        <option value="teatro">Teatro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="observaciones">Observaciones:</label>
+                    <select id="observaciones" name="observaciones">
+                        <option value="Inscrito">Inscrito</option>
+                        <option value="Reinscrito">Reinscrito</option>
+                    </select>
+                </div>
+
+                <button type="submit">Enviar</button>
+                <p id="mensaje-status"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
